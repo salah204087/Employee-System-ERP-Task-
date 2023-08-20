@@ -1,0 +1,161 @@
+﻿@model IEnumerable<EmployeeSystemERPTaskWeb.Model.DTO.LanguageLevelDTO>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Level List</title>
+</head>
+<body>
+
+
+    <div class="card shadow border-0 mt-4">
+        <div class="card-header bg-black bg-gradient ml-0 py-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-white py-2">Language Level List</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-4">
+            <div class="row pb-3">
+                <div class="col-6">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search">
+                </div>
+                @if (User.IsInRole("admin"))
+                {
+                    <div class="col-6 text-end">
+                        <a asp-controller="LanguageLevel" asp-action="Create" class="btn btn-primary">
+                            <i class="fa-solid fa-plus"></i>  Create New Language Level
+                        </a>
+                    </div>
+                }
+
+            </div>
+
+            <table id="facultyTable" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        @if (User.IsInRole("admin"))
+                        {
+                            <th>
+                                Language Level Id <i class="fa-solid fa-arrow-down"></i>
+                            </th>
+                        }
+
+                        <th>
+                            Language Level<i class="fa-solid fa-arrow-down-wide-short"></i>
+                        </th>
+                        @if (User.IsInRole("admin"))
+                        {
+                            <th></th>
+                        }
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            @if (User.IsInRole("admin"))
+                            {
+                                <td>@obj.Id</td>
+                            }
+
+                            <td>
+                                @obj.Name
+                            </td>
+                            @if (User.IsInRole("admin"))
+                            {
+                                <td>
+                                    <div class="w-75 btn-group" role="group">
+                                        <a asp-controller="LanguageLevel" asp-action="Update" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </a>
+                                        <a asp-controller="LanguageLevel" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            }
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="row mt-3">
+                <div class="col text-end">
+                    <div class="btn-group" role="group" aria-label="Records per page">
+                        <button type="button" class="btn btn-secondary records-per-page" data-records="10">
+                            10
+                        </button>
+                        <button type="button" class="btn btn-secondary records-per-page" data-records="25">
+                            25
+                        </button>
+                        <button type="button" class="btn btn-secondary records-per-page" data-records="50">
+                            50
+                        </button>
+                        <button type="button" class="btn btn-secondary records-per-page" data-records="100">
+                            100
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#facultyTable tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+
+            $("th").click(function () {
+                var table = $(this).parents("table").eq(0);
+                var rows = table.find("tr:gt(0)").toArray().sort(comparator($(this).index()));
+                this.asc = !this.asc;
+                if (!this.asc) {
+                    rows = rows.reverse();
+                }
+                for (var i = 0; i < rows.length; i++) {
+                    table.append(rows[i]);
+                }
+            });
+
+            function comparator(index) {
+                return function (a, b) {
+                    var valA = getCellValue(a, index),
+                        valB = getCellValue(b, index);
+                    return $.isNumeric(valA) && $.isNumeric(valB)
+                        ? valA - valB
+                        : valA.toString().localeCompare(valB);
+                };
+            }
+
+            function getCellValue(row, index) {
+                return $(row).children("td").eq(index).text();
+            }
+
+            $(".records-per-page").click(function () {
+                var records = $(this).data("records");
+                $("#facultyTable").data("records-per-page", records);
+                updateTablePagination();
+            });
+
+            function updateTablePagination() {
+                var recordsPerPage = $("#facultyTable").data("records-per-page");
+                $("#facultyTable tbody tr").hide();
+                $("#facultyTable tbody tr:lt(" + recordsPerPage + ")").show();
+            }
+
+            $(".records-per-page[data-records='10']").click();
+
+        });
+    </script>
+</body>
+</html>

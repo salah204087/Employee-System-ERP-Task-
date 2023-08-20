@@ -1,0 +1,59 @@
+﻿@model EmployeeSystemERPTaskWeb.Model.DTO.LoginRequestDTO
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post">
+            <h2>Login</h2>
+            <div class="input-field">
+                <input asp-for="UserName" type="text" required>
+                <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+                <input id="password-input" asp-for="Password" type="password" required>
+                <label>Enter your password</label>
+                <span class="password-toggle-icon" onclick="togglePasswordVisibility()">
+                    <i class="fa fa-eye" id="eye-icon"></i>
+                </span>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember me</p>
+                </label>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a asp-action="Register" asp-controller="Auth">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password-input");
+            var eyeIcon = document.getElementById("eye-icon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>

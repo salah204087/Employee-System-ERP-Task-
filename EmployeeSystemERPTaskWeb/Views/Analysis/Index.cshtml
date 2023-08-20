@@ -1,0 +1,126 @@
+﻿<link rel="stylesheet" href="~/css/analysis.css" />
+
+<div class="video-background">
+    <video autoplay loop muted playsinline>
+        <source src="https://v4.cdnpk.net/videvo_files/video/free/video0478/large_watermarked/_import_6260e6d59d6b53.72176252_FPpreview.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="container">
+
+    <partial name="_Navbar" />
+
+    <h1 id="title">Our System in numbers</h1>
+    <div class="wrap">
+        @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+        {
+            <div class="number_box">
+                <span class="count">@Model[0]</span>
+                <h2><i class="fas fa-user"></i> Employees</h2>
+            </div>
+        }
+        <div class="number_box">
+            <span class="count">@Model[4]</span>
+            <h2><i class="fa-solid fa-earth-americas"></i> Languages</h2>
+        </div>
+        <div class="number_box">
+            <span class="count">@Model[5]</span>
+            <h2><i class="fa-solid fa-briefcase"></i> Accounts</h2>
+        </div>
+      
+    </div>
+    @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+    {
+         <div id="bar-chart"></div>
+         <div id="pie-chart"></div>
+    }
+</div>
+<script src="~/js/analysis.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawCharts);
+    function drawCharts() {
+
+        var barData = google.visualization.arrayToDataTable([
+            ['Employee', 'Employee Number'],
+            ['Eng', @Model[1]],
+            ['Fre', @Model[2]],
+            ['Ita', @Model[3]],
+        ]);
+        var barOptions = {
+            focusTarget: 'category',
+            backgroundColor: 'transparent',
+            colors: ['cornflowerblue', 'tomato'],
+            fontName: 'Open Sans',
+            chartArea: {
+                left: 50,
+                top: 10,
+                width: '100%',
+                height: '70%'
+            },
+            bar: {
+                groupWidth: '80%'
+            },
+            hAxis: {
+                textStyle: {
+                    fontSize: 11
+                }
+            },
+            vAxis: {
+                minValue: 0,
+                maxValue: @Model[0],
+                baselineColor: '#DDD',
+                gridlines: {
+                    color: '#DDD',
+                    count: 4
+                },
+                textStyle: {
+                    fontSize: 11
+                }
+            },
+            legend: {
+                position: 'bottom',
+                textStyle: {
+                    fontSize: 12
+                }
+            },
+            animation: {
+                duration: 1200,
+                easing: 'out',
+                startup: true
+            }
+        };
+        var barChart = new google.visualization.ColumnChart(document.getElementById('bar-chart'));
+        barChart.draw(barData, barOptions);
+
+        var pieData = google.visualization.arrayToDataTable([
+            ['Employee', 'Employee Number'],
+            ['Eng', @Model[1]],
+            ['Fre', @Model[2]],
+            ['Ita', @Model[3]],
+        ]);
+        var pieOptions = {
+            backgroundColor: 'transparent',
+            pieHole: 0.4,
+            colors: ["cornflowerblue", "olivedrab", "orange"],
+            pieSliceText: 'value',
+            tooltip: {
+                text: 'percentage'
+            },
+            fontName: 'Open Sans',
+            chartArea: {
+                width: '100%',
+                height: '94%'
+            },
+            legend: {
+                textStyle: {
+                    fontSize: 13
+                }
+            }
+        };
+        var pieChart = new google.visualization.PieChart(document.getElementById('pie-chart'));
+        pieChart.draw(pieData, pieOptions);
+    }
+</script>
+

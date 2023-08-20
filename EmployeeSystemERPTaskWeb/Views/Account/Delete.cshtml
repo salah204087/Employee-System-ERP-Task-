@@ -1,0 +1,36 @@
+﻿@model EmployeeSystemERPTaskWeb.Models.VM.AccountVM
+
+@{
+    ViewData["Title"] = "Delete Confirmation";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-lg" style="width: 600px; margin: 0 auto;">
+                <h1 class="card-header bg-black text-white text-center">Add a New Account</h1>
+                <div class="card-body">
+                    <form asp-action="Delete" class="mt-4">
+                        <input hidden asp-for="Account.Id" />
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Account.Name" class="control-label">Name</label>
+                            <input asp-for="Account.Name" class="form-control" disabled/>
+                            <span asp-validation-for="Account.Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Account.LineOfBusinessIds" class="control-label">Business Lines</label>
+                            <select asp-for="Account.LineOfBusinessIds" class="form-control" asp-items="@Model.LineOfBusinessList" multiple disabled></select>
+                            <span asp-validation-for="Account.LineOfBusinessIds" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center mt-3">
+                            <button type="submit" class="btn btn-danger" asp-controller="Account" asp-action="Delete" >Delete</button>
+                            <a class="btn btn-secondary ml-2" asp-action="Index">Show All</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

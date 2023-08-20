@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Employee's System ERP Task-API.props" />
+</Project>

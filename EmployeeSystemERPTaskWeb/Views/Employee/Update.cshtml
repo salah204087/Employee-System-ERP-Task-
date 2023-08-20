@@ -1,0 +1,69 @@
+﻿@model EmployeeSystemERPTaskWeb.Models.VM.EmployeeUpdateVM
+
+@{
+    ViewData["Title"] = "Update Employee";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-lg" style="width: 600px; margin: 0 auto;">
+                <h1 class="card-header bg-black text-white text-center">Add a New Employee</h1>
+                <div class="card-body">
+                    <form asp-action="Update" class="mt-4">
+                        <input hidden asp-for="Employee.Id" />
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Employee.Name" class="control-label">Name</label>
+                            <input asp-for="Employee.Name" class="form-control" />
+                            <span asp-validation-for="Employee.Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Employee.NationalId" class="control-label"></label>
+                            <input asp-for="Employee.NationalId" type="number" class="form-control" />
+                            <span asp-validation-for="Employee.NationalId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Employee.BirthDate" class="control-label"></label>
+                            <input asp-for="Employee.BirthDate" type="date" class="form-control" />
+                            <span asp-validation-for="Employee.BirthDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Employee.LanguageId" class="control-label">Select Language</label>
+                            <div class="custom-select">
+                                <select asp-for="Employee.LanguageId" class="form-control select-center" asp-items="@(new List<SelectListItem> { new SelectListItem { Value = "", Text = "--select--" } }.Concat(Model.LanguageList))"></select>
+                                <div class="arrow-icon"></div>
+                            </div>
+                            <span asp-validation-for="Employee.LanguageId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Employee.LanguageLevelIds" class="control-label">Language Levels</label>
+                            <select asp-for="Employee.LanguageLevelIds" class="form-control" asp-items="@Model.LanguageLevelList" multiple></select>
+                            <span asp-validation-for="Employee.LanguageLevelIds" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Employee.AccountId" class="control-label">Select Account</label>
+                            <div class="custom-select">
+                                <select asp-for="Employee.AccountId" class="form-control select-center" asp-items="@(new List<SelectListItem> { new SelectListItem { Value = "", Text = "--select--" } }.Concat(Model.AccountList))"></select>
+                                <div class="arrow-icon"></div>
+                            </div>
+                            <span asp-validation-for="Employee.AccountId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Employee.BusinessLineId" class="control-label">Select Business Line</label>
+                            <div class="custom-select">
+                                <select asp-for="Employee.BusinessLineId" class="form-control select-center" asp-items="@(new List<SelectListItem> { new SelectListItem { Value = "", Text = "--select--" } }.Concat(Model.LineOfBusinessList))"></select>
+                                <div class="arrow-icon"></div>
+                            </div>
+                            <span asp-validation-for="Employee.BusinessLineId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center mt-3">
+                            <button type="submit" class="btn btn-success">Update</button>
+                            <a class="btn btn-secondary ml-2" asp-action="Index">Show All</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

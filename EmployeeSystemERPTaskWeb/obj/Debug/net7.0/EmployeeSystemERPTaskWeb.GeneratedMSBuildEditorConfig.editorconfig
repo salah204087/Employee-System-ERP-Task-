@@ -1,0 +1,149 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EmployeeSystemERPTaskWeb
+build_property.RootNamespace = EmployeeSystemERPTaskWeb
+build_property.ProjectDir = D:\projects\ASP.NET\Employee's System ERP Task-API\EmployeeSystemERPTaskWeb\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\projects\ASP.NET\Employee's System ERP Task-API\EmployeeSystemERPTaskWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Account/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Account/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Account/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Analysis/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hbHlzaXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Auth/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Employee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Employee/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LanguageLevel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VMZXZlbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LanguageLevel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VMZXZlbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LanguageLevel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VMZXZlbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LanguageLevel/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VMZXZlbFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Language/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Language/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Language/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Language/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LineOfBusiness/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGluZU9mQnVzaW5lc3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LineOfBusiness/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGluZU9mQnVzaW5lc3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LineOfBusiness/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGluZU9mQnVzaW5lc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/LineOfBusiness/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGluZU9mQnVzaW5lc3NcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/ASP.NET/Employee's System ERP Task-API/EmployeeSystemERPTaskWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-gwbhf3yu0n
